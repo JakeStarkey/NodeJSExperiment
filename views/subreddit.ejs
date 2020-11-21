@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/app.css">
-    <title><%= name %></title>
-</head>
-<body>
+<%- include('partials/head') %>
+
+<div class="container">
     <h1>Browsing the <%= name %> subreddit.</h1>
     <h2> <%= description %> </h2>
     <p><%= subscribers %> Total Subs</p>
@@ -21,10 +15,11 @@
             </article>
         <% } %>
     </section>
-    <!-- introduced taking params out of index.js and using it with EJS
+</div>
+<!-- introduced taking params out of index.js and using it with EJS
 
-        Added pulling information from a const out of index.js 
-        (mimicking a database for now) and looped through to find objects
-        and running them through separate articles -->
-</body>
-</html>
+    Added pulling information from a const out of index.js 
+    (mimicking a database for now) and looped through to find objects
+    and running them through separate articles -->
+
+<%- include('partials/footer') %>
