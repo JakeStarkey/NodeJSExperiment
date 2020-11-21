@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Cats!</title>
-</head>
-<body>
+<%- include('partials/head') %>
+   
+<div class="container">
+    
     <h1>All the Cats!</h1>
 
     <ul>
@@ -13,8 +9,7 @@
             <li><%= cat %> </li>
         <% } %>
     </ul>
-    
-    <!-- Introduced loops targeting const in index.js -->
-    
-</body>
-</html>
+</div>
+<!-- Introduced loops targeting const in index.js -->
+
+<%- include('partials/footer') %>
