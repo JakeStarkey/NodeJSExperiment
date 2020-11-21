@@ -11,3 +11,6 @@ Tools used:
 - NodeJS
 - Express
 - EJS file delivery system
+- Bootstrap
+
+Final styling still needs to be done. 
