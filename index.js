@@ -8,9 +8,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-
 app.get ('/', (req, res) => {
-    res.render('home');
+    res.render('home', {name: 'Express Demo'});
 })
 
 app.get('/cats', (req,res) => {
@@ -18,12 +17,12 @@ app.get('/cats', (req,res) => {
         'Blue', 'Rocket', 'Monty', 'Stephanie', 'Winston'
         // Pretending this is from a database for now
     ];
-    res.render('cats', { cats });
+    res.render('cats', { cats, name: 'Cats' });
 })
 
 app.get('/random', (req,res) => {
     const num = Math.floor(Math.random() * 10) + 1;
-    res.render('random', {random: num})
+    res.render('random', {num, name: 'Random'})
 })
 
 app.get('/r/:subreddit', (req, res) => {
